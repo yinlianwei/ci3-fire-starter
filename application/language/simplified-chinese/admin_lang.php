@@ -27,9 +27,9 @@ $lang['admin tooltip filter_reset']       = "清除所有过滤器和排序规�
 // Form Inputs
 $lang['admin input active']               = "激活";
 $lang['admin input inactive']             = "不激活";
-$lang['admin input items_per_page']       = "items/page";
-$lang['admin input select']               = "select...";
-$lang['admin input username']             = "Username";
+$lang['admin input items_per_page']       = "项/页";
+$lang['admin input select']               = "选择...";
+$lang['admin input username']             = "用户名";
 
 // Table Columns
 $lang['admin col actions']                = "操作";

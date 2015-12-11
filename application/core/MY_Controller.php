@@ -39,17 +39,17 @@ class MY_Controller extends CI_Controller {
         // set global header data - can be merged with or overwritten in controllers
 		$this
 			->add_external_css(
-				array(
-					"//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css",
-					"//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css",
-					"//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css",
-					"/themes/core/css/core.css"
-				))
-			->add_external_js(
-				array(
-					"//libs.baidu.com/jquery/1.9.1/jquery.min.js",
-					"//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"
-				));
+                array(
+                    base_url('themes/core/css/bootstrap.min.css'),
+                    base_url("themes/core/css/bootstrap-theme.min.css"),
+                    base_url("themes/core/css/font-awesome.min.css"),
+                    base_url("/themes/core/css/core.css")
+                ))
+            ->add_external_js(
+                array(
+                    "/themes/core/js/jquery.min.js",
+                    "/themes/core/js/bootstrap.min.js"
+                ));
 
         $this->includes[ 'js_files_i18n' ] = array(
             $this->jsi18n->translate("/themes/core/js/core_i18n.js")

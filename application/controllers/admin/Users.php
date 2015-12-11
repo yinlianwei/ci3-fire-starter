@@ -125,7 +125,35 @@ class Users extends Admin_Controller {
         $this->pagination->initialize(array(
             'base_url'   => THIS_URL . "?sort={$sort}&dir={$dir}&limit={$limit}{$filter}",
             'total_rows' => $users['total'],
-            'per_page'   => $limit
+            'per_page'   => $limit,
+            'num_links' => 3,
+            'page_query_string' => TRUE,
+            'enable_query_strings' => TRUE,
+            'query_string_segment'  => 'offset',
+            'full_tag_open'  => '<div><ul class="pagination" style="margin: 0;">',
+            'full_tag_close'  => '</ul></div>',
+
+            'first_link'  => '&laquo;',
+            'first_tag_open'  => '<li class="prev page">',
+            'first_tag_close'  => '</li>',
+
+            'last_link'  => '&raquo;',
+            'last_tag_open'  => '<li class="next page">',
+            'last_tag_close'  => '</li>',
+
+            'next_link'  => '&rarr;',
+            'next_tag_open'  => '<li class="next page">',
+            'next_tag_close'  => '</li>',
+
+            'prev_link'  => '&larr;',
+            'prev_tag_open'  => '<li class="prev page">',
+            'prev_tag_close'  => '</li>',
+
+            'cur_tag_open'  => '<li class="active"><a href="">',
+            'cur_tag_close'  => '</a></li>',
+
+            'num_tag_open'  => '<li class="page">',
+            'num_tag_close'  => '</li>'
         ));
 
         // setup page header data
